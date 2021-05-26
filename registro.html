@@ -33,32 +33,50 @@
         </div>
         </div>
     </nav>
-        <div class="container col-6">
+        <div class="container col-8">
             <h1>Registro OYE</h1>
-            <form class="form-grup">
-                <div>
-                    <label for="username">Nombre de usuario</label>
-                    <input type="nombre" class="form-control" id="nombre" placeholder="Ej: luis">
-                    <label for="correo">Correo Electronico</label>
-                    <input type="email" class="form-control" id="correo" placeholder="Ejemplo@gmail.com">
-                    <label for="contraseña">Contraseña</label>
-                    <input type="contraseña" class="form-control" id="contraseña" placeholder="@123456">
-                    <label for="contraseña">Confirma Contraseña</label>
-                    <input type="contraseña" class="form-control" id="contraseña" placeholder="@123456">
-                    <label for="genero">Seleccione Genero</label>
-                    <select id="genero" class="form-select">
-                        <option value="" selected>Despliegue menu</option>
-                        <option value="1">Rock</option>
-                        <option value="2">Balada</option>
-                        <option value="3">Salsa</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary mb-2">Registro</button>
-                <div  class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Acepto terminos y condiciones</label>
-                </div>
-            </form>
+            <form action="">
+        <div class="form-row">
+            <div class="form-group col-md-8">
+            <label for="nombres">Nombre Completo</label> <span class="text-danger" id="nombres"></span>
+            <input type="text" class="form-control" id="nombres" placeholder="Nombres">
+            </div>
+            <div class="form-group col-md-8">
+            <label for="email">Email</label> <span class="text-danger" id="errorEmail"></span>
+            <input type="email" class="form-control" id="email" placeholder="Email"> 
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+            <label for="contrasena">Contraseña</label> <span class="text-danger" id="errorContrasena"></span>
+            <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+            </div>
+            <div class="form-group col-md-8">
+            <label for="confirmacion">Contraseña (Confirmación)</label> <span class="text-danger" id="errorConfirmacion"></span>
+            <input type="password" class="form-control" id="confirmacion" placeholder="Confirmar contraseña">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+            <label for="genero">Tipo de Usuario</label> <span class="text-danger" id="errorTipo"></span>
+            <select id="genero" class="form-control">
+                <option value="" selected>Seleccione...</option>
+                <option value="1">Rock</option>
+                <option value="2">Salsa</option>
+                <option value="3">Otro</option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group">
+                <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="acepto">
+            <label class="form-check-label" for="acepto">
+                Acepto los términos y condiciones <span class="text-danger" id="errorAcepto"></span>
+            </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" onclick="return validar(this.form)">Continuar</button>
+        </form>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

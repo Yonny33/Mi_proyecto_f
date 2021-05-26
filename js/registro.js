@@ -1,8 +1,7 @@
-console.log(Varios);
 
 function validar(formulario) {
 
-    if (formulario.nombre.value.trim().length == 0) {
+    if (formulario.nombres.value.trim().length == 0) {
     alert("Nombre obligatorio");
     return false;
     }
