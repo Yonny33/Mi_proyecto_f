@@ -9,17 +9,8 @@ $(function () {
 
 		imprimirCanciones(cancionesList);
 
-		buscador = document.getElementById("busqueda");
-
-		buscador.addEventListener("keyup", function () {
-			var valor = buscador.value;
-			cancionesFiltro = cancionesList.filter((x) => {
-				return x.nombre.includes(valor);
-			});
-			imprimirCanciones(cancionesFiltro);
 		});
 	});
-});
 
 function imprimirCanciones(canciones) {
 	html = "";
