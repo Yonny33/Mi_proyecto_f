@@ -1,6 +1,6 @@
 console.log("correcto");
 
-$(function () {
+$(document).ready(function () {
 	//Solicitar canciones
 	$.ajax({
 		url: "datos.json",
@@ -8,9 +8,8 @@ $(function () {
 		cancionesList = respuesta.canciones;
 
 		imprimirCanciones(cancionesList);
-
-		});
 	});
+});
 
 function imprimirCanciones(canciones) {
 	html = "";
@@ -34,6 +33,6 @@ function imprimirCanciones(canciones) {
 		html += nuevafila;
 	}
 
-	$("#divCanciones").html(html);
-}
+	document.getElementById("Canciones").innerHTML = html;
+};
 
